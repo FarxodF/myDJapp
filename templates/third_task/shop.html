@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+</head>
+<body>
+    <h1>Магазин</h1>
+    {% if items %}
+        <ul>
+            {% for item, price in items.items %}
+                <li>{{ item }} - {{ price }} Купить</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'index' %}">На главную</a>
+    {% else %}
+        Нет товаров в магазине.
+    {% endif %}
+</body>
+</html>
