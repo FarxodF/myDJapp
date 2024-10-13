@@ -8,3 +8,5 @@ def my_function_view(request):
 
 class MyClassView(TemplateView):
     template_name = 'second_task/class_view_template.html'
+
+
